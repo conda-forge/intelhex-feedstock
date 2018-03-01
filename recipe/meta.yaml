@@ -1,6 +1,6 @@
 {% set name = "intelhex" %}
-{% set version = "2.1" %}
-{% set sha256 = "7c1e136efe97672dcf90feed18fc291977d4f5eccf13d124583bec376c0db44c" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "009d8511e0d50639230c39af9607deee771cf026f67ef7507a8c3fd4fa927832" %}
 
 package:
   name: {{ name|lower }}
