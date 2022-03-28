@@ -17,10 +17,10 @@ build:
   script: python setup.py install
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.5
   run:
-    - python
+    - python >=3.5
 
 test:
   imports:
