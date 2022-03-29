@@ -1,6 +1,6 @@
 {% set name = "intelhex" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "009d8511e0d50639230c39af9607deee771cf026f67ef7507a8c3fd4fa927832" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "892b7361a719f4945237da8ccf754e9513db32f5628852785aea108dcd250093" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   number: 0
   noarch: python
-  script: python setup.py install
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
   run:
     - python
