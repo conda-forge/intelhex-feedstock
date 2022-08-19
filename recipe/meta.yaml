@@ -12,19 +12,27 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: python setup.py install
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - pip
     - python >=3.5
+    - setuptools
   run:
     - python >=3.5
 
 test:
   imports:
     - intelhex
+  commands:
+    - pip check
+    # Double check that intelhex is included in the pip list
+    - pip list
+  requires:
+    - pip
 
 about:
   home: https://pypi.python.org/pypi/IntelHex
