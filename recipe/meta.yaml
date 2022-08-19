@@ -29,6 +29,8 @@ test:
     - intelhex
   commands:
     - pip check
+    # Double check that intelhex is included in the pip list
+    - pip list
   requires:
     - pip
 
